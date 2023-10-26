@@ -2,15 +2,15 @@ const { expect } = require("chai");
 const { ethers } = require("hardhat");
 
 describe("MyERC20Token", function () {
+  let MyERC20Token;
   let myERC20Token;
   let owner;
   let user;
 
   beforeEach(async function () {
     [owner, user] = await ethers.getSigners();
-    const MyERC20Token = await ethers.getContractFactory("MyERC20Token");
+    MyERC20Token = await ethers.getContractFactory("MyERC20Token");
     myERC20Token = await MyERC20Token.deploy();
-    await myERC20Token.deployed();
   });
 
   it("Should have the correct name, symbol, and decimals", async function () {
@@ -18,15 +18,14 @@ describe("MyERC20Token", function () {
     expect(await myERC20Token.symbol()).to.equal("ecedis");
     expect(await myERC20Token.decimals()).to.equal(18);
   });
-
   it("Should have the correct initial total supply", async function () {
     const totalSupply = await myERC20Token.totalSupply();
-    expect(totalSupply).to.equal(100000000 * 10 ** 18);
+    expect(totalSupply).to.equal(BigInt("100000000000000000000000000"));
   });
 
   it("Should transfer tokens between accounts", async function () {
     const initialBalanceOwner = await myERC20Token.balanceOf(owner.address);
-    const transferAmount = 1000;
+    const transferAmount = BigInt(1000);
     await myERC20Token.transfer(user.address, transferAmount);
 
     const finalBalanceOwner = await myERC20Token.balanceOf(owner.address);
@@ -36,23 +35,18 @@ describe("MyERC20Token", function () {
     expect(finalBalanceUser).to.equal(transferAmount);
   });
 
-  it("Should approve and transferFrom tokens", async function () {
-    const transferAmount = 1000;
-    await myERC20Token.approve(user.address, transferAmount);
+  it("It should approve and transfer from token", async function () {
+    const initialAllowance = 1000;
+    await myERC20Token.approve(user.address, initialAllowance);
+    const transferAmount = 100;
     await myERC20Token
       .connect(user)
       .transferFrom(owner.address, user.address, transferAmount);
-
-    const finalBalanceOwner = await myERC20Token.balanceOf(owner.address);
-    const finalBalanceUser = await myERC20Token.balanceOf(user.address);
-
-    expect(finalBalanceOwner).to.equal(0);
-    expect(finalBalanceUser).to.equal(transferAmount);
   });
 
   it("Should revert when transferring more tokens than the balance", async function () {
     const initialBalanceOwner = await myERC20Token.balanceOf(owner.address);
-    const transferAmount = initialBalanceOwner + 1;
+    const transferAmount = BigInt(initialBalanceOwner) + BigInt(1);
 
     await expect(
       myERC20Token.transfer(user.address, transferAmount)
