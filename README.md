@@ -128,15 +128,14 @@ Run the tests to ensure the contract functions as expected:
 - GitHub: [@githubhandle](https://github.com/Lizdev-05)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/elizabeth-oyinlade-ojesanmi-0702aa16a)
 
-<!-- 👤 **Ojesanmi Elizabeth Oyin**
+< 👤 **Bernard Addy Sackey**
 
-- GitHub: [@githubhandle](https://github.com/Lizdev-05)
-- LinkedIn: [LinkedIn](https://www.linkedin.com/in/elizabeth-oyinlade-ojesanmi-0702aa16a)
+- GitHub: [@githubhandle](https://github.com/boypaida12)
 
-👤 **Ojesanmi Elizabeth Oyin**
+👤 **Shadrack Amekileng Apollo**
 
-- GitHub: [@githubhandle](https://github.com/Lizdev-05)
-- LinkedIn: [LinkedIn](https://www.linkedin.com/in/elizabeth-oyinlade-ojesanmi-0702aa16a) -->
+- GitHub: [@githubhandle](https://github.com/apolloshadrack)
+- LinkedIn: [LinkedIn](https://ke.linkedin.com/in/shadrackapollo)
 
 ## 🔭 Future Features <a name="future-features"></a>
 
