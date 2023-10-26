@@ -101,10 +101,11 @@ Install project dependencies using the command::
 ### Deployment
 
 You can deploy this project using:
+Configure Hardhat to use the desired Ethereum network in the hardhat.config.js file.
+Run the deployment script to deploy the MyERC20Token contract:
 
 ```sh
-  Configure Hardhat to use the desired Ethereum network in the hardhat.config.js file.
-  Run the deployment script to deploy the MyERC20Token contract:
+
   npx hardhat run scripts/deploy.js --network YOUR_NETWORK
 
 ```
