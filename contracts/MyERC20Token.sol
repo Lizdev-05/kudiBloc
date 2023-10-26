@@ -4,8 +4,8 @@ pragma solidity ^0.8.0;
 
 contract MyERC20Token {
 
-    string public constant name = "eCedis";
-    string public constant symbol = "ecedis";
+    string public constant name = "mockeCedi";
+    string public constant symbol = "mockecedi";
     uint8 public constant decimals = 18;
 
     uint256 public totalSupply;
