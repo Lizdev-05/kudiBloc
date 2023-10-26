@@ -1,10 +1,11 @@
 # 📗 Table of Contents
 
 - [📗 Table of Contents](#-table-of-contents)
-- [📖 Portfolio ](#-Personal-Portfolio)
+- [📖 KudiBloc ](#-KudiBloc)
 
   - [🛠 Built With ](#-built-with-)
     - [Tech Stack ](#tech-stack-)
+    - [Structure](#structure-)
     - [Key Features ](#key-features-)
   - [🚀 Live Demo ](#-live-demo-)
   - [💻 Getting Started ](#-getting-started-)
@@ -30,6 +31,18 @@
 ### Tech Stack <a name="tech-stack"></a>
 
 <details>
+  <summary>Client</summary>
+  <ul>
+   <li><a href="https://soliditylang.org/">Solidity</a></li>
+    <li><a href="https://hardhat.org/"></a>Hardhat</li>
+    <li><a href="#">Chai</a></li>
+    <li><a href="#">Infura</a></li>
+  </ul>
+</details>
+
+### Structure <a name="structure"></a>
+
+<detail>
   <summary>Project Structure</summary>
   <ul>
     <li>Contracts: The MyERC20Token.sol file contains the Solidity code for the ERC-20 token contract.</li>
@@ -37,7 +50,13 @@
     <li>Test: The MyERC20Token.js file contains tests for the MyERC20Token contract using Hardhat and Chai.</li>
     
   </ul>
-</details>
+  <p>The contract includes functions for:
+    <li>Checking the balance of an account.</li>
+    <li>Transferring tokens between accounts.</li>
+    <li>Approving and transferring tokens on behalf of another account.</li>
+    <li>Reverting transactions if the sender does not have sufficient balance or allowance.</li>
+</p>
+</detail>
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
@@ -90,7 +109,7 @@ You can deploy this project using:
 
 ```
 
-### Test
+### Run tests
 
 Run the tests to ensure the contract functions as expected:
 
@@ -108,7 +127,7 @@ Run the tests to ensure the contract functions as expected:
 - GitHub: [@githubhandle](https://github.com/Lizdev-05)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/elizabeth-oyinlade-ojesanmi-0702aa16a)
 
-👤 **Ojesanmi Elizabeth Oyin**
+<!-- 👤 **Ojesanmi Elizabeth Oyin**
 
 - GitHub: [@githubhandle](https://github.com/Lizdev-05)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/elizabeth-oyinlade-ojesanmi-0702aa16a)
@@ -116,7 +135,7 @@ Run the tests to ensure the contract functions as expected:
 👤 **Ojesanmi Elizabeth Oyin**
 
 - GitHub: [@githubhandle](https://github.com/Lizdev-05)
-- LinkedIn: [LinkedIn](https://www.linkedin.com/in/elizabeth-oyinlade-ojesanmi-0702aa16a)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/elizabeth-oyinlade-ojesanmi-0702aa16a) -->
 
 ## 🔭 Future Features <a name="future-features"></a>
 
