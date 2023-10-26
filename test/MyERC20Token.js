@@ -14,8 +14,8 @@ describe("MyERC20Token", function () {
   });
 
   it("Should have the correct name, symbol, and decimals", async function () {
-    expect(await myERC20Token.name()).to.equal("eCedis");
-    expect(await myERC20Token.symbol()).to.equal("ecedis");
+    expect(await myERC20Token.name()).to.equal("mockeCedi");
+    expect(await myERC20Token.symbol()).to.equal("mockecedi");
     expect(await myERC20Token.decimals()).to.equal(18);
   });
   it("Should have the correct initial total supply", async function () {
