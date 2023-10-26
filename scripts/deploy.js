@@ -1,23 +1,22 @@
-const { ethers } = require("hardhat");
+const hre = require("hardhat");
 
-async function deployMyERC20Token() {
-  // Get the first (default) Ethereum account as the deployer
-  const [deployer] = await ethers.getSigners();
+async function main() {
+  const [deployer] = await hre.ethers.getSigners();
 
   // Replace with the actual constructor arguments if needed
-  const initialSupply = ethers.utils.parseUnits("100000000", 18); // 100 million tokens
+  const initialSupply = hre.ethers.parseEther("0.001"); // 100 million tokens
 
   // Deploy the MyERC20Token contract
-  const MyERC20Token = await ethers.getContractFactory("MyERC20Token");
-  const token = await MyERC20Token.deploy(initialSupply);
+  const MyERC20Token = await hre.ethers.getContractFactory("MyERC20Token");
+  const token = await MyERC20Token.deploy();
 
-  await token.deployed();
+  await token.waitForDeployment();
 
-  console.log("MyERC20Token deployed to:", token.address);
+  console.log("MyERC20Token deployed to:", token.target);
   console.log("Deployed by:", deployer.address);
 }
 
-deployMyERC20Token()
+main()
   .then(() => process.exit(0))
   .catch((error) => {
     console.error(error);
